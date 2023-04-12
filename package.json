@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server ./public",
-    "build": "echo \"Replace this with a script that puts everything into /doc folder\" && exit 1",
+    "build": "./build.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

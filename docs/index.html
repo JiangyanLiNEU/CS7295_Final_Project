@@ -4,9 +4,68 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Placeholder</title>
+    <title>Recession Comparison</title>
+    <link rel="stylesheet" href="./recession-comparison.css" />
   </head>
   <body>
-    This is a placeholder page that shows this works
+    <main>
+      <div class="container">
+        <h1>Recession Comparison</h1>
+
+        <section title="definition">
+          <h2>What is a recession?</h2>
+          <hr />
+          <div class="section-content">
+            <p>
+              The formal definition of recession is: a period of temporary economic decline during which trade and
+              industrial activity are reduced, generally identified by a fall in GDP in two successive quarters.
+            </p>
+            <p>
+              Along with GDP, a common indicator to look for is the unemployment rate. The chart below shows the overall
+              unemployment rate in the US for the since 1965.
+            </p>
+            <p>In the visualizations below, the recession periods are marked with grey areas.</p>
+          </div>
+
+          <div id="observablehq-unemploymentRateChart-250ef10c"></div>
+
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" />
+          <script type="module">
+            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/d3c7315f35caef69@41.js?v=3";
+            new Runtime().module(define, (name) => {
+              if (name === "unemploymentRateChart")
+                return new Inspector(document.querySelector("#observablehq-unemploymentRateChart-250ef10c"));
+            });
+          </script>
+        </section>
+
+        <div class="separator"></div>
+
+        <section>
+          <h2>How do recessions recover?</h2>
+          <hr />
+          <div class="section-content">
+            <p>
+              Not all recessions are equal. At the end of most recessions, unemployment rate starts to recover
+              (decrease) as we saw from above. But do unemployment rates recover at the same rate?
+            </p>
+            <p>Let's take a look.</p>
+          </div>
+
+          <div id="observablehq-mainChart-6658392d"></div>
+
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" />
+          <script type="module">
+            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/d8ee95eeee07f719@737.js?v=3";
+            new Runtime().module(define, (name) => {
+              if (name === "mainChart")
+                return new Inspector(document.querySelector("#observablehq-mainChart-6658392d"));
+            });
+          </script>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
