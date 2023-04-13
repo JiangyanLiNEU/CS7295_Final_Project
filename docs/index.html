@@ -32,7 +32,7 @@
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" />
           <script type="module">
             import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-            import define from "https://api.observablehq.com/d/d3c7315f35caef69@41.js?v=3";
+            import define from "https://api.observablehq.com/d/d3c7315f35caef69.js?v=3";
             new Runtime().module(define, (name) => {
               if (name === "unemploymentRateChart")
                 return new Inspector(document.querySelector("#observablehq-unemploymentRateChart-250ef10c"));
@@ -53,15 +53,27 @@
             <p>Let's take a look.</p>
           </div>
 
-          <div id="observablehq-mainChart-6658392d"></div>
+          <div id="observablehq-viewof-alignment-d4ae94a0"></div>
+          <div id="observablehq-mainChart-d4ae94a0"></div>
 
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" />
           <script type="module">
             import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-            import define from "https://api.observablehq.com/d/d8ee95eeee07f719@737.js?v=3";
+            import define from "https://api.observablehq.com/d/d8ee95eeee07f719.js?v=3";
             new Runtime().module(define, (name) => {
+              if (name === "viewof alignment")
+                return new Inspector(document.querySelector("#observablehq-viewof-alignment-d4ae94a0"));
               if (name === "mainChart")
-                return new Inspector(document.querySelector("#observablehq-mainChart-6658392d"));
+                return new Inspector(document.querySelector("#observablehq-mainChart-d4ae94a0"));
+              return [
+                "urPlot",
+                "getRecessionData",
+                "getRecessionEndDateIdx",
+                "monthlyURChart",
+                "yearlyURChart",
+                "indexedData",
+                "chart",
+              ].includes(name);
             });
           </script>
         </section>
