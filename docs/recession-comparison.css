@@ -1,0 +1,36 @@
+h1 {
+  text-align: center;
+  /* margin-bottom: 2em; */
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+main {
+  margin-top: 2em;
+}
+
+section {
+  min-width: 1100px;
+  width: 45%;
+  margin: 0 auto;
+  margin-bottom: 5em;
+}
+
+.separator {
+  height: 10em;
+}
+
+.container {
+  margin: 0 20px;
+}
+
+.section-content {
+  font-size: 1.67em;
+}
+
+.section-note {
+  font-size: 1.25em;
+}
