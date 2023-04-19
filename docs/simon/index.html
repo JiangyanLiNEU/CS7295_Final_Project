@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>Testing</h1>
+    <div id="intro">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia a saepe sed deleniti molestiae eaque est
+        veritatis itaque aliquam officiis at minus obcaecati quam placeat natus perferendis, voluptatum dolorum sequi
+        asperiores, cum voluptate. Reprehenderit repellendus ducimus eaque quam mollitia autem illum, adipisci dolorum
+        ipsa, veniam fuga et consequuntur eos in? Natus, doloribus voluptas. Dolorem libero obcaecati vitae omnis ipsum
+        hic nesciunt odit vero accusamus reiciendis, similique optio perferendis aut, sunt debitis iusto consectetur
+        quidem beatae eveniet sit, blanditiis nam numquam! Totam modi quis dicta corrupti alias iste enim delectus.
+        Culpa inventore asperiores officia cum eius omnis eum in labore est. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Sapiente eius soluta odit cum, a, dolores aliquam omnis labore dolorem sunt temporibus vel
+        quibusdam molestiae minus ipsum reprehenderit optio, porro voluptatibus!
+      </p>
+    </div>
+
+    <section id="scroll">
+      <!--  graphic container  -->
+      <div id="charts">
+        <!--   actual graphic/chart   -->
+        <div class="chart" id="chart1">
+          <div id="observablehq-viewof-highlightRecessionsUR-74b1a713"></div>
+          <div id="observablehq-focusContextURChart-74b1a713"></div>
+
+          <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" /> -->
+          <script type="module">
+            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/d3c7315f35caef69.js?v=3";
+            new Runtime().module(define, (name) => {
+              if (name === "viewof highlightRecessionsUR")
+                return new Inspector(document.querySelector("#observablehq-viewof-highlightRecessionsUR-74b1a713"));
+              if (name === "focusContextURChart")
+                return new Inspector(document.querySelector("#observablehq-focusContextURChart-74b1a713"));
+            });
+          </script>
+        </div>
+        <div class="chart" id="chart2">
+          <div id="observablehq-viewof-highlightRecessionsIR-74b1a713"></div>
+          <div id="observablehq-focusContextIRChart-74b1a713"></div>
+
+          <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" /> -->
+          <script type="module">
+            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/d3c7315f35caef69.js?v=3";
+            new Runtime().module(define, (name) => {
+              if (name === "viewof highlightRecessionsIR")
+                return new Inspector(document.querySelector("#observablehq-viewof-highlightRecessionsIR-74b1a713"));
+              if (name === "focusContextIRChart")
+                return new Inspector(document.querySelector("#observablehq-focusContextIRChart-74b1a713"));
+            });
+          </script>
+        </div>
+        <div class="chart" id="chart3">
+          <div id="observablehq-viewof-alignment-d4ae94a0"></div>
+          <div id="observablehq-mainChart-d4ae94a0"></div>
+
+          <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" /> -->
+          <script type="module">
+            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/d8ee95eeee07f719.js?v=3";
+            new Runtime().module(define, (name) => {
+              if (name === "viewof alignment")
+                return new Inspector(document.querySelector("#observablehq-viewof-alignment-d4ae94a0"));
+              if (name === "mainChart")
+                return new Inspector(document.querySelector("#observablehq-mainChart-d4ae94a0"));
+              return [
+                "urPlot",
+                "getRecessionData",
+                "getRecessionEndDateIdx",
+                "monthlyURChart",
+                "yearlyURChart",
+                "indexedData",
+                "chart",
+              ].includes(name);
+            });
+          </script>
+        </div>
+        <div class="chart" id="chart4">
+          <div id="observablehq-viewof-alignment-d4ae94a0"></div>
+          <div id="observablehq-mainChart-d4ae94a0"></div>
+
+          <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" /> -->
+          <script type="module">
+            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/d8ee95eeee07f719.js?v=3";
+            var test = new Runtime().module(define, (name) => {
+              if (name === "viewof alignment")
+                return new Inspector(document.querySelector("#observablehq-viewof-alignment-d4ae94a0"));
+              if (name === "mainChart")
+                return new Inspector(document.querySelector("#observablehq-mainChart-d4ae94a0"));
+              return [
+                "urPlot",
+                "getRecessionData",
+                "getRecessionEndDateIdx",
+                "monthlyURChart",
+                "yearlyURChart",
+                "indexedData",
+                "chart",
+              ].includes(name);
+            });
+          </script>
+        </div>
+      </div>
+
+      <!--  step/text container  -->
+      <div class="steps">
+        <div class="step" data-step="1">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti ut quisquam iste beatae laboriosam! Totam
+            adipisci cupiditate, porro veniam rem aperiam unde! Sint fugiat optio reiciendis inventore? Laudantium
+            veritatis impedit molestiae, ipsa earum quibusdam debitis delectus, ab commodi soluta voluptatum corrupti
+            reprehenderit dolor repudiandae quaerat esse, omnis accusantium perspiciatis dolore. laudantium vel numquam
+            soluta quae quo quas, nesciunt hic suscipit, qui velit repellendus quisquam fugiat ipsa repellat.
+          </p>
+        </div>
+        <div class="step" data-step="2">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique molestiae, eius rerum nulla eligendi vel
+            illum odit? Tenetur quisquam expedita nemo odio necessitatibus harum nesciunt, alias soluta vel sequi illo
+            voluptatibus ad optio adipisci, saepe porro provident repudiandae in dicta molestias ratione quasi!
+            Perferendis, quod porro. Saepe, omnis voluptatum minus architecto molestiae, blanditiis sint mollitia atque
+            commodi maxime repudiandae cumque vel harum. Ipsum molestias, sed omnis, ullam quisquam voluptatibus, animi
+            dolor pariatur quibusdam magni delectus tenetur inventore est mollitia. Impedit laudantium iste ab fugit
+            commodi. Iure debitis voluptas explicabo quidem placeat aliquid magni minima maxime et facilis, deleniti
+            incidunt consequatur? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores delectus, accusamus
+            ad amet laudantium vel numquam soluta quae quo quas, nesciunt hic suscipit, qui velit repellendus quisquam
+            fugiat ipsa repellat.
+          </p>
+        </div>
+        <div class="step" data-step="3">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque provident excepturi modi repellat, quaerat
+            eum, sunt similique, laudantium nemo delectus nulla accusamus quidem! Hic magni repellat, ut soluta amet,
+            recusandae dolore ullam consequatur nihil earum autem reiciendis sequi quis sint. Lorem ipsum dolor sit
+            amet, consectetur adipisicing elit. Maiores delectus, accusamus ad amet laudantium vel numquam soluta quae
+            quo quas, nesciunt hic suscipit, qui velit repellendus quisquam fugiat ipsa repellat.
+          </p>
+        </div>
+        <div class="step" data-step="4">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores delectus, accusamus ad amet laudantium vel
+            numquam soluta quae quo quas, nesciunt hic suscipit, qui velit repellendus quisquam fugiat ipsa repellat.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptatum eius quasi, quia esse ad assumenda
+        quidem nulla nemo autem placeat vitae dicta eligendi necessitatibus aspernatur culpa impedit architecto
+        accusantium?
+      </p>
+    </div>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

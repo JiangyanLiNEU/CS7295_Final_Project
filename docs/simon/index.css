@@ -1,0 +1,29 @@
+.steps {
+  width: 20%;
+}
+
+.step {
+  margin-top: 50px;
+  min-height: 600px;
+}
+
+.chart {
+  display: none;
+}
+
+#charts {
+  width: 70%;
+  margin-right: 10px;
+  position: sticky;
+  top: 100px;
+  left: 0px;
+  height: 600px;
+}
+
+#scroll {
+  display: flex;
+}
+
+#intro {
+  min-height: 800px;
+}
