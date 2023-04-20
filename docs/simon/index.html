@@ -26,90 +26,9 @@
 
     <section id="scroll">
       <!--  graphic container  -->
-      <div id="charts">
+      <div id="holder">
         <!--   actual graphic/chart   -->
-        <div class="chart" id="chart1">
-          <div id="observablehq-viewof-highlightRecessionsUR-74b1a713"></div>
-          <div id="observablehq-focusContextURChart-74b1a713"></div>
-
-          <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" /> -->
-          <script type="module">
-            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-            import define from "https://api.observablehq.com/d/d3c7315f35caef69.js?v=3";
-            new Runtime().module(define, (name) => {
-              if (name === "viewof highlightRecessionsUR")
-                return new Inspector(document.querySelector("#observablehq-viewof-highlightRecessionsUR-74b1a713"));
-              if (name === "focusContextURChart")
-                return new Inspector(document.querySelector("#observablehq-focusContextURChart-74b1a713"));
-            });
-          </script>
-        </div>
-        <div class="chart" id="chart2">
-          <div id="observablehq-viewof-highlightRecessionsIR-74b1a713"></div>
-          <div id="observablehq-focusContextIRChart-74b1a713"></div>
-
-          <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" /> -->
-          <script type="module">
-            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-            import define from "https://api.observablehq.com/d/d3c7315f35caef69.js?v=3";
-            new Runtime().module(define, (name) => {
-              if (name === "viewof highlightRecessionsIR")
-                return new Inspector(document.querySelector("#observablehq-viewof-highlightRecessionsIR-74b1a713"));
-              if (name === "focusContextIRChart")
-                return new Inspector(document.querySelector("#observablehq-focusContextIRChart-74b1a713"));
-            });
-          </script>
-        </div>
-        <div class="chart" id="chart3">
-          <div id="observablehq-viewof-alignment-d4ae94a0"></div>
-          <div id="observablehq-mainChart-d4ae94a0"></div>
-
-          <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" /> -->
-          <script type="module">
-            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-            import define from "https://api.observablehq.com/d/d8ee95eeee07f719.js?v=3";
-            new Runtime().module(define, (name) => {
-              if (name === "viewof alignment")
-                return new Inspector(document.querySelector("#observablehq-viewof-alignment-d4ae94a0"));
-              if (name === "mainChart")
-                return new Inspector(document.querySelector("#observablehq-mainChart-d4ae94a0"));
-              return [
-                "urPlot",
-                "getRecessionData",
-                "getRecessionEndDateIdx",
-                "monthlyURChart",
-                "yearlyURChart",
-                "indexedData",
-                "chart",
-              ].includes(name);
-            });
-          </script>
-        </div>
-        <div class="chart" id="chart4">
-          <div id="observablehq-viewof-alignment-d4ae94a0"></div>
-          <div id="observablehq-mainChart-d4ae94a0"></div>
-
-          <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" /> -->
-          <script type="module">
-            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-            import define from "https://api.observablehq.com/d/d8ee95eeee07f719.js?v=3";
-            var test = new Runtime().module(define, (name) => {
-              if (name === "viewof alignment")
-                return new Inspector(document.querySelector("#observablehq-viewof-alignment-d4ae94a0"));
-              if (name === "mainChart")
-                return new Inspector(document.querySelector("#observablehq-mainChart-d4ae94a0"));
-              return [
-                "urPlot",
-                "getRecessionData",
-                "getRecessionEndDateIdx",
-                "monthlyURChart",
-                "yearlyURChart",
-                "indexedData",
-                "chart",
-              ].includes(name);
-            });
-          </script>
-        </div>
+        <div id="chart"></div>
       </div>
 
       <!--  step/text container  -->
@@ -121,6 +40,7 @@
             veritatis impedit molestiae, ipsa earum quibusdam debitis delectus, ab commodi soluta voluptatum corrupti
             reprehenderit dolor repudiandae quaerat esse, omnis accusantium perspiciatis dolore. laudantium vel numquam
             soluta quae quo quas, nesciunt hic suscipit, qui velit repellendus quisquam fugiat ipsa repellat.
+            <button id="toggle">toggle</button>
           </p>
         </div>
         <div class="step" data-step="2">
@@ -162,7 +82,91 @@
         accusantium?
       </p>
     </div>
+
+    <div class="chart" id="chart1">
+      <div id="observablehq-viewof-highlightRecessionsUR-74b1a713"></div>
+      <div id="observablehq-focusContextURChart-74b1a713"></div>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" /> -->
+      <script type="module">
+        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+        import define from "https://api.observablehq.com/d/d3c7315f35caef69.js?v=3";
+        new Runtime().module(define, (name) => {
+          if (name === "viewof highlightRecessionsUR")
+            return new Inspector(document.querySelector("#observablehq-viewof-highlightRecessionsUR-74b1a713"));
+          if (name === "focusContextURChart")
+            return new Inspector(document.querySelector("#observablehq-focusContextURChart-74b1a713"));
+        });
+      </script>
+    </div>
+    <div class="chart" id="chart2">
+      <div id="observablehq-viewof-highlightRecessionsIR-74b1a713"></div>
+      <div id="observablehq-focusContextIRChart-74b1a713"></div>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" /> -->
+      <script type="module">
+        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+        import define from "https://api.observablehq.com/d/d3c7315f35caef69.js?v=3";
+        new Runtime().module(define, (name) => {
+          if (name === "viewof highlightRecessionsIR")
+            return new Inspector(document.querySelector("#observablehq-viewof-highlightRecessionsIR-74b1a713"));
+          if (name === "focusContextIRChart")
+            return new Inspector(document.querySelector("#observablehq-focusContextIRChart-74b1a713"));
+        });
+      </script>
+    </div>
+    <div class="chart" id="chart3">
+      <div id="observablehq-viewof-alignment-d4ae94a0"></div>
+      <div id="observablehq-mainChart-d4ae94a0"></div>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" /> -->
+      <script type="module">
+        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+        import define from "https://api.observablehq.com/d/d8ee95eeee07f719.js?v=3";
+        new Runtime().module(define, (name) => {
+          if (name === "viewof alignment")
+            return new Inspector(document.querySelector("#observablehq-viewof-alignment-d4ae94a0"));
+          if (name === "mainChart") return new Inspector(document.querySelector("#observablehq-mainChart-d4ae94a0"));
+          return [
+            "urPlot",
+            "getRecessionData",
+            "getRecessionEndDateIdx",
+            "monthlyURChart",
+            "yearlyURChart",
+            "indexedData",
+            "chart",
+          ].includes(name);
+        });
+      </script>
+    </div>
+    <div class="chart" id="chart4">
+      <div id="observablehq-viewof-alignment-d4ae94a0"></div>
+      <div id="observablehq-mainChart-d4ae94a0"></div>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" /> -->
+      <script type="module">
+        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+        import define from "https://api.observablehq.com/d/d8ee95eeee07f719.js?v=3";
+        var test = new Runtime().module(define, (name) => {
+          if (name === "viewof alignment")
+            return new Inspector(document.querySelector("#observablehq-viewof-alignment-d4ae94a0"));
+          if (name === "mainChart") return new Inspector(document.querySelector("#observablehq-mainChart-d4ae94a0"));
+          return [
+            "urPlot",
+            "getRecessionData",
+            "getRecessionEndDateIdx",
+            "monthlyURChart",
+            "yearlyURChart",
+            "indexedData",
+            "chart",
+          ].includes(name);
+        });
+      </script>
+    </div>
+
+    <!-- <script src="./wrapper.js" type="module"></script> -->
+    <!-- <script src="./test.js" type="module"></script> -->
     <script src="https://unpkg.com/scrollama"></script>
-    <script src="index.js"></script>
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>

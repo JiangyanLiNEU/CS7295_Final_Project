@@ -3,15 +3,12 @@
 }
 
 .step {
+  opacity: 0.1;
   margin-top: 50px;
   min-height: 600px;
 }
 
-.chart {
-  display: none;
-}
-
-#charts {
+#holder {
   width: 70%;
   margin-right: 10px;
   position: sticky;
