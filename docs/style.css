@@ -1,0 +1,34 @@
+#bg {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-image: url('./cover.jpg');
+    background-size: cover;
+    height: 100vh;
+  }
+
+#grouped{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-top: 20%;
+    margin-left: 70%;
+    width: fit-content;
+    height:50vh;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+.button{
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px cornflowerblue dashed;
+    height: fit-content;
+}
+
+.text{
+    font-size: large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    color: cornflowerblue;
+}
