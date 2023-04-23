@@ -1,0 +1,183 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+em {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+p,
+li {
+  font-size: 1.15em;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  height: 52px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  z-index: 10000;
+  transition: all 0.2s ease-in-out;
+  /* background-color: transparent; */
+}
+
+header.active {
+  background: #fff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+header nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  line-height: 52px;
+}
+
+header.active .menu a {
+  color: #364750;
+}
+
+header .menu a {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+}
+
+header.active .menu a:hover {
+  border-bottom: solid 4px #364750;
+}
+
+main {
+  padding: 0 15px;
+}
+
+.primary {
+  background-color: rgb(43, 87, 249);
+}
+
+.steps {
+  width: 25%;
+}
+
+.step {
+  opacity: 0.1;
+  padding-top: 200px;
+  padding-left: 20px;
+  min-height: 500px;
+  margin-bottom: 100px;
+}
+
+.scroll {
+  display: flex;
+}
+
+.intersection {
+  min-height: 600px;
+  padding-top: 400px;
+  text-align: center;
+}
+
+.chart-holder {
+  width: 70%;
+  margin-right: 10px;
+  position: sticky;
+  top: 75px;
+  left: 0px;
+  height: 600px;
+}
+
+/* .chart {
+  width: auto;
+} */
+
+.note {
+  text-align: center;
+  padding: 10px;
+}
+
+.interactor {
+  cursor: pointer;
+  padding: 1px 4px;
+  border-radius: 10px;
+  color: white;
+}
+
+#title {
+  padding-top: 50px;
+  text-align: center;
+}
+
+#intro,
+.intersection {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#intro {
+  margin-top: 50px;
+  min-height: 600px;
+}
+
+#intro > h2 {
+  text-align: center;
+}
+
+#start {
+  margin-top: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#startButton {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 4em;
+  cursor: pointer;
+}
+
+#chart4Title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#section4 > .chart-holder {
+  top: 180px;
+}
+
+#exploreSection {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#exploreSection > .chart {
+  margin-bottom: 100px;
+}

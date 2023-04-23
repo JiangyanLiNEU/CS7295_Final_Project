@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Economy Exploration | Recession Comparison</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header id="scroll-header" class="active">
+      <nav>
+        <div class="menu">
+          <a href="../index.html">Home</a>
+          <a href="#title">Intro</a>
+          <a href="#overview">Overview</a>
+          <a href="#recessionComparison">Recession comparison</a>
+          <a href="#ethnicity">Ethnicity Comparison</a>
+          <a href="#geo">Geographical Comparison</a>
+          <a href="#explore">Explore</a>
+        </div>
+      </nav>
+    </header>
+
+    <div id="title">
+      <h1>Recession Comparison</h1>
+      <div>Author: Fengrui (Simon)</div>
+    </div>
+    <main>
+      <div id="intro">
+        <h2 class="section-title">Introduction</h2>
+        <p>
+          Not too long ago, there were a lot of mass layoffs from tech companies accompanied by the continuing increase
+          of interest rate. Therefore, a lot of people are worried about a pending recession. In order to know if we
+          have are heading into a recession, we need to first know more about what a recession is and how they manifest
+          in the economy.
+        </p>
+
+        <h2 class="section-title">What is a recession?</h2>
+        <p>
+          The formal definition of recession is: a period of temporary economic decline during which trade and
+          industrial activity are reduced, generally identified by a fall in GDP in two successive quarters.
+        </p>
+        <p>Now that we know how a recession is defined, let's see what they look like.</p>
+
+        <div id="start">
+          <p>Click or scroll down to start</p>
+          <button id="startButton">
+            <i class="fa-solid fa-chevron-down fa-bounce" style="--fa-animation-duration: 2s"></i>
+          </button>
+        </div>
+      </div>
+
+      <section id="overview" class="scroll">
+        <div class="chart-holder">
+          <div class="note" id="topNote1"></div>
+          <div class="chart" id="chart1"></div>
+          <div class="note" id="bottomNote1"></div>
+        </div>
+
+        <div class="steps">
+          <div class="step" data-step="1">
+            <p>This chart shows the <em>overall unemployment rate in the US since 1965</em>.</p>
+            <p>Can you guess when there were recessions happening in the US?</p>
+          </div>
+
+          <div class="step" data-step="2">
+            <p>Let's highlight the recession periods. How close were your guesses?</p>
+            <p>We can see some interesting patterns here:</p>
+            <ol>
+              <li><strong>The unemployment rate seems to always increase during a recession.</strong></li>
+              <li>
+                <strong>
+                  The unemployment rate tend to start increasing at the start of a recession, and tend to peak at the
+                  end.
+                </strong>
+              </li>
+            </ol>
+            <p>
+              From this pattern we just found, we should be able to say that we are not yet in a recession (as of March
+              2023).
+            </p>
+          </div>
+
+          <div class="step" data-step="3">
+            <p>How about the interest rate? Another common economic indicator to look for is the interest rate.</p>
+            <p>This chart shows the <em>interest rate in the US since 1965</em>.</p>
+            <p>Can you spot when there were recessions happening from the interest rate?</p>
+          </div>
+
+          <div class="step" data-step="4">
+            <p>That was likely harder to do. How did you do?</p>
+            <p>We can also see some patterns here:</p>
+            <ol>
+              <li><strong>The interest rate tend to decrease during a recession.</strong></li>
+              <li><strong>The interest rate tend to increase before a recession starts.</strong></li>
+            </ol>
+            <p>From this pattern, we might say that we are indeed heading towards a recession (as of March 2023).</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="intersection" id="recessionComparison">
+        <h2 class="section-title">What if we put recessions side by side?</h2>
+        <div>Now that we have seen the big picture, let's dive a bit deeper into the recessions.</div>
+      </div>
+
+      <section id="section2" class="scroll">
+        <div class="chart-holder">
+          <div class="note" id="topNote2"></div>
+          <div class="chart" id="chart2"></div>
+          <div class="note" id="bottomNote2"></div>
+        </div>
+
+        <div class="steps">
+          <div class="step" data-step="5">
+            <p>This chart shows the unemployment rate after each recession.</p>
+            <p>
+              From this chart, we can see that
+              <strong
+                >the <em>Double-Dip Recession</em> is the only recession that peaked at the end of the recession</strong
+              >. All other recessions have the unemployment peak within 2 years after the recession ended.
+            </p>
+            <p>
+              We can also see that
+              <strong>the <em>Great Recession</em> has the longest recovery period of over 10 years.</strong>
+            </p>
+          </div>
+          <div class="step" data-step="6">
+            <p>
+              If we align the recession by the start instead, we can see that
+              <strong>
+                the unemployment peak occurs at a similar time, around 2 years after the recessions started.
+              </strong>
+            </p>
+          </div>
+          <div class="step" data-step="7">
+            <p>
+              What if we look at the percentage difference of unemployment rates compared the the start of the
+              recessions?
+            </p>
+            <p>
+              We can see that of the 4 recessions,
+              <strong>
+                the <em>Great Recession</em> has the biggest increase in unemployment rate and took the longest to
+                recover.
+              </strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="intersection" id="ethnicity">
+        <h2 class="section-title">How about other aspects of unemployment rate?</h2>
+        <div>
+          We have been looking at the overall unemployment rate, what about, say, the unemployment rate by ethnicities?
+        </div>
+      </div>
+
+      <section id="section3" class="scroll">
+        <div class="chart-holder">
+          <div class="note" id="topNote3"></div>
+          <div class="chart" id="chart3"></div>
+          <div class="note" id="bottomNote3"></div>
+        </div>
+        <div class="steps">
+          <div class="step" data-step="8">
+            <p>This chart shows the unemployment rate of different ethnicities.</p>
+            <p>
+              We can see that
+              <strong> <em>African-Americans</em> have the highest unemployment rate overall.</strong> But
+              <strong><em>Hispanics</em> have the highest unemployment rate at the peak of Covid recession. </strong>
+            </p>
+          </div>
+
+          <div class="step" data-step="9">
+            <p>What about an indexed version of the unemployment rates?</p>
+            <p>
+              If we index the rates at <em>the end of the Great Recession</em>
+              <button class="interactor primary" id="endOfGR">
+                <i class="fa-regular fa-hand-pointer"></i>
+              </button>
+              , we can see that the unemployment rates of each ethnicities behave similarly except for the peak of Covid
+              Recession, where African-Americans has the smallest spike.
+            </p>
+            <p>
+              It more obvious if we index the rates at <em>the end of the Covid Recession</em>
+              <button class="interactor primary" id="endOfCR">
+                <i class="fa-regular fa-hand-pointer"></i>
+              </button>
+              , we can see that the line representing African-Americans separating from other lines.
+            </p>
+            <p>
+              This means
+              <strong>
+                all ethnicities except African-Americans were affected more by the <em>Covid Recession</em> than the
+                <em>Great Recession</em>.
+              </strong>
+            </p>
+            <p>
+              We can also see that
+              <strong>
+                the unemployment rate for African-Americans decreased the slowest after the
+                <em>Covid Recession</em>.
+              </strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="intersection" id="geo">
+        <h2 class="section-title">What does unemployment rate look like geographically?</h2>
+        <div>So far, we have been looking at the entire US, let's look at each region instead.</div>
+      </div>
+
+      <section id="section4" class="scroll">
+        <div class="chart-holder">
+          <div class="note" id="topNote4"></div>
+          <div id="chart4Title"></div>
+          <div class="chart" id="chart4"></div>
+          <div class="chart" id="legend4"></div>
+          <div class="note" id="bottomNote4"></div>
+        </div>
+        <div class="steps">
+          <div class="step" data-step="10">
+            <p>
+              Here we have two <em>US County</em> maps showing the change of unemployment rate from the start of
+              recessions to the end of recessions.
+            </p>
+            <p>
+              We can see that the
+              <strong><em>COVID Recession</em> had a larger overall unemployment rate increase</strong> than the Great
+              Recession.
+            </p>
+          </div>
+          <div class="step" data-step="11">
+            <p>But the <em>Dot-Bomb Recession</em> looks very different.</p>
+            <p>
+              <strong>
+                At the end of the Dot-Bomb Recession, most of the US counties had a decrease in unemployment rate.
+              </strong>
+            </p>
+            <p>
+              If you still remember, <em>the Dot-Bomb Recession</em> is one of the recessions that have an unemployment
+              rate peak after the end.
+            </p>
+            <p>So perhaps we should compare the peaks of each recession.</p>
+          </div>
+          <div class="step" data-setp="12">
+            <p>Now we look at the change of unemployment rate from the start to the peak of recessions.</p>
+            <p>
+              The Dot-Bomb Recession looks more normal now, but we can still see that
+              <strong>
+                more counties had a decrease in unemployment rate during the <em>Dot-Bomb Recession</em> compared to the
+                <em>Great Recession.</em>
+              </strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="intersection" id="explore">
+        <h2 class="section-title">Explore on your own</h2>
+        <div>
+          The above includes everything I found during my exploration, feel free to explore for more insights below.
+        </div>
+      </div>
+
+      <section id="exploreSection">
+        <div class="chart">
+          <div id="viewof-highlightRecessionsUR"></div>
+          <div id="focusContextURChart"></div>
+          <script type="module">
+            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/d3c7315f35caef69.js?v=3";
+            new Runtime().module(define, (name) => {
+              if (name === "viewof highlightRecessionsUR")
+                return new Inspector(document.querySelector("#viewof-highlightRecessionsUR"));
+              if (name === "focusContextURChart") return new Inspector(document.querySelector("#focusContextURChart"));
+            });
+          </script>
+        </div>
+        <div class="chart">
+          <div id="viewof-highlightRecessionsIR"></div>
+          <div id="focusContextIRChart"></div>
+          <script type="module">
+            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/d3c7315f35caef69.js?v=3";
+            new Runtime().module(define, (name) => {
+              if (name === "viewof highlightRecessionsIR")
+                return new Inspector(document.querySelector("#viewof-highlightRecessionsIR"));
+              if (name === "focusContextIRChart") return new Inspector(document.querySelector("#focusContextIRChart"));
+            });
+          </script>
+        </div>
+        <div class="chart">
+          <div id="viewof-alignment"></div>
+          <div id="viewof-indexed"></div>
+          <div id="comp-mainChart"></div>
+          <script type="module">
+            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/d8ee95eeee07f719.js?v=3";
+            new Runtime().module(define, (name) => {
+              if (name === "viewof alignment") return new Inspector(document.querySelector("#viewof-alignment"));
+              if (name === "viewof indexed") return new Inspector(document.querySelector("#viewof-indexed"));
+              if (name === "mainChart") return new Inspector(document.querySelector("#comp-mainChart"));
+              return [
+                "urPlot",
+                "getRecessionData",
+                "getRecessionEndDateIdx",
+                "monthlyURChart",
+                "yearlyURChart",
+                "indexedData",
+                "chart",
+              ].includes(name);
+            });
+          </script>
+        </div>
+        <div class="chart">
+          <div id="unemploymentRateByRaceIndexed"></div>
+          <script type="module">
+            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/a343beacb0bc740a@266.js?v=3";
+            new Runtime().module(define, (name) => {
+              if (name === "unemploymentRateByRaceIndexed")
+                return new Inspector(document.querySelector("#unemploymentRateByRaceIndexed"));
+            });
+          </script>
+        </div>
+
+        <div class="chart">
+          <div id="viewof-startToPeak"></div>
+          <div style="display: flex; margin-bottom: 20px">
+            <div id="viewof-leftMap"></div>
+            <div id="viewof-rightMap" style="margin-left: 100px"></div>
+          </div>
+          <div id="mainChart"></div>
+
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" />
+          <script type="module">
+            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/7583eceebc56b08f@997.js?v=3";
+            new Runtime().module(define, (name) => {
+              if (name === "viewof startToPeak") return new Inspector(document.querySelector("#viewof-startToPeak"));
+              if (name === "viewof leftMap") return new Inspector(document.querySelector("#viewof-leftMap"));
+              if (name === "viewof rightMap") return new Inspector(document.querySelector("#viewof-rightMap"));
+              if (name === "mainChart") return new Inspector(document.querySelector("#mainChart"));
+              return [
+                "recessionDiffs",
+                "recessionDataMap",
+                "getScale",
+                "legend",
+                "recessionsToShow",
+                "recessionsToShowDiff",
+                "recessionData",
+              ].includes(name);
+            });
+          </script>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://kit.fontawesome.com/aa892a9d47.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>
