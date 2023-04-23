@@ -20,6 +20,13 @@ document.querySelector("#endOfCR").addEventListener("click", () => {
   ethnicityUrSetIndexDate(new Date("4/1/2020"));
 });
 
+document.querySelector("#chart4").addEventListener("mouseenter", () => {
+  window.addEventListener("DOMMouseScroll", (e) => e.preventDefault(), false);
+});
+document.querySelector("#chart4").addEventListener("mouseleave", () => {
+  window.removeEventListener("DOMMouseScroll", (e) => e.preventDefault(), false);
+});
+
 const cbs = [
   { cb: overallUr, args: [false, { "#bottomNote1": "Drag and scroll to zoom select custom date range." }] },
   { cb: overallUr, args: [true, { "#bottomNote1": "Drag and scroll to zoom select custom date range." }] },
@@ -36,7 +43,7 @@ const cbs = [
       "Great Recession (2007 - 09)",
       "COVID-19 Recession (2020)",
       false,
-      { "#bottomNote4": "Mouse over and scroll to zoom in" },
+      { "#bottomNote4": "Mouse over and scroll to zoom in, drag to move" },
     ],
   },
   {
@@ -45,7 +52,7 @@ const cbs = [
       "Great Recession (2007 - 09)",
       "Dot-Bomb Recession (2001)",
       false,
-      { "#bottomNote4": "Mouse over and scroll to zoom in" },
+      { "#bottomNote4": "Mouse over and scroll to zoom in, drag to move" },
     ],
   },
   {
@@ -54,7 +61,7 @@ const cbs = [
       "Great Recession (2007 - 09)",
       "Dot-Bomb Recession (2001)",
       true,
-      { "#bottomNote4": "Mouse over and scroll to zoom in" },
+      { "#bottomNote4": "Mouse over and scroll to zoom in, drag to move" },
     ],
   },
 ];
