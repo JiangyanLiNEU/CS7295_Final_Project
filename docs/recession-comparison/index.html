@@ -341,6 +341,7 @@
             <div id="viewof-rightMap" style="margin-left: 100px"></div>
           </div>
           <div id="mainChart"></div>
+          <div id="legend"></div>
 
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" />
           <script type="module">
@@ -351,6 +352,7 @@
               if (name === "viewof leftMap") return new Inspector(document.querySelector("#viewof-leftMap"));
               if (name === "viewof rightMap") return new Inspector(document.querySelector("#viewof-rightMap"));
               if (name === "mainChart") return new Inspector(document.querySelector("#mainChart"));
+              if (name === "legend") return new Inspector(document.querySelector("#legend"));
               return [
                 "recessionDiffs",
                 "recessionDataMap",
