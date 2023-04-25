@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Economy Exploration | Recession Comparison</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.svg" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css" />
     <link rel="stylesheet" href="index.css" />
   </head>
@@ -115,21 +116,21 @@
 
         <div class="steps">
           <div class="step" data-step="5">
-            <p>This chart shows the unemployment rate after each recession.</p>
+            <p>This chart shows the unemployment rate after each <em>"pre-Covid"</em> recession.</p>
             <p>
-              From this chart, we can see that
-              <strong
-                >the <em>Double-Dip Recession</em> is the only recession that peaked at the end of the recession</strong
-              >. All other recessions have the unemployment peak within 2 years after the recession ended.
+              Here the Covid Recession is excluded because it is a unique recession (the narrow spike at the tail of the
+              Great Recession), because its cause is a health crisis instead of a financial one.
             </p>
             <p>
-              We can also see that
-              <strong>the <em>Great Recession</em> has the longest recovery period of over 10 years.</strong>
+              From this chart, we can see that
+              <strong>
+                the <em>Double-Dip Recession</em> is the only recession that peaked at the end of the recession
+              </strong>
             </p>
           </div>
           <div class="step" data-step="6">
             <p>
-              If we align the recession by the start instead, we can see that
+              If we align the recession by the start instead, we can better see that
               <strong>
                 the unemployment peak occurs at a similar time, around 2 years after the recessions started.
               </strong>
@@ -169,8 +170,10 @@
             <p>This chart shows the unemployment rate of different ethnicities.</p>
             <p>
               We can see that
-              <strong> <em>African-Americans</em> have the highest unemployment rate overall.</strong> But
-              <strong><em>Hispanics</em> have the highest unemployment rate at the peak of Covid recession. </strong>
+              <strong>
+                <em>African-Americans</em> have the highest unemployment rate at all times since 2000 except during the
+                <em>Covid recession</em>.
+              </strong>
             </p>
           </div>
 
@@ -297,6 +300,7 @@
         <div class="chart">
           <div id="viewof-alignment"></div>
           <div id="viewof-indexed"></div>
+          <div id="viewof-preCovid"></div>
           <div id="comp-mainChart"></div>
           <script type="module">
             import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
@@ -304,6 +308,7 @@
             new Runtime().module(define, (name) => {
               if (name === "viewof alignment") return new Inspector(document.querySelector("#viewof-alignment"));
               if (name === "viewof indexed") return new Inspector(document.querySelector("#viewof-indexed"));
+              if (name === "viewof preCovid") return new Inspector(document.querySelector("#viewof-preCovid"));
               if (name === "mainChart") return new Inspector(document.querySelector("#comp-mainChart"));
               return [
                 "urPlot",
